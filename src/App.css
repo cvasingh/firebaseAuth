@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+	.contener{
+		height: 100%;
+		width: 100%;
+		background-color: rgba(2, 225, 139, 1.0);
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+	}
+	.main{
+		width: 380px;
+		height: 480px;
+		position: relative;
+		margin: 5% auto;
+		background: #666;
+		box-shadow: 5px 5px 20px 1px #666;
+		padding: 10px 50px;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.button_box{
+		width: 250px;
+		margin: 30px auto;
+		background-color: #555;
+		position: relative;
+		box-shadow: 1px 1px 20px 1px #555;
+		border-radius: 20px;
+		text-align: center;
+	}
+	.toggle_btn{
+  		font-weight: bold;
+  		font-size: 18px;
+		color: #fff;
+  		text-shadow: 1px 1px 10px #999;
+		padding: 5px 30px;
+		cursor: pointer;
+		background: transparent;
+		border: 0;
+		outline: none;
+		position: relative;
+	}
+	#btn{
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 125px;
+		height: 100%;
+		background: linear-gradient( to right,rgba(2, 225, 139, 0.2),rgba(2, 225, 139, 0.8),rgba(2, 225, 139, 0.8),rgba(2, 225, 139, 0.2));
+		border-radius: 20px;
+		transition: 0.5s;
+	}
+
+	/*form*/
+
+	.heading{
+  		font-weight: bold;
+		margin-top: -10px;
+  		font-size: 38px;
+  		text-align: center;
+		color: rgba(2, 225, 139, 1.0);
+	}
+	.google_box{
+		text-align: center;
+		margin-top: -20px;
+	}
+	.btn_style{
+		margin-top: 20px;
+  		font-weight: 500;
+		color: rgba(2, 225, 139, 1.0);
+	}
+	.btn-light:hover {
+		background-color: rgba(2, 225, 139, 0.9);
+		border-color: rgba(2, 225, 139, 0.5);
+	}
+	label{
+  		/*font-weight: bold;*/
+  		font-size: 18px;
+		color: rgba(2, 225, 139, 1.0);
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.form-control{
+		border-radius: 15px;
+
+	}
+	.form-check-input{
+		margin-top: 15px;
+	}
+	#log_in{
+		width: 250px;
+		transition: 0.3s;
+		position: absolute;
+		left: 60px;
+	}
+	#sign_up{
+		width: 250px;
+		transition: 0.3s;
+		position: absolute;
+		left: 385px;
+
+	}
