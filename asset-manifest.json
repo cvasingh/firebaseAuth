@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/firebaseAuth/static/css/main.7a4d22bc.css",
+    "main.js": "/firebaseAuth/static/js/main.c6c6a83f.js",
+    "static/js/787.7abfd805.chunk.js": "/firebaseAuth/static/js/787.7abfd805.chunk.js",
+    "index.html": "/firebaseAuth/index.html",
+    "main.7a4d22bc.css.map": "/firebaseAuth/static/css/main.7a4d22bc.css.map",
+    "main.c6c6a83f.js.map": "/firebaseAuth/static/js/main.c6c6a83f.js.map",
+    "787.7abfd805.chunk.js.map": "/firebaseAuth/static/js/787.7abfd805.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a4d22bc.css",
+    "static/js/main.c6c6a83f.js"
+  ]
+}
