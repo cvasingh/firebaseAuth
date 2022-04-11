@@ -4,7 +4,6 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import Form from './Form';
-
 function App() {
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,7 +19,6 @@ function App() {
     appId: "1:392122146328:web:c9dba32b11b748f4072d6d",
     measurementId: "G-F2VDKDD5FG"
   };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service

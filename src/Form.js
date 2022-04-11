@@ -3,6 +3,8 @@ import { auth, getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/aut
 
 export default function Form() {
     const [details, setDetails] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const x = useRef(null);
     const y = useRef(null);
@@ -73,6 +75,10 @@ export default function Form() {
                 });
         }
     }
+    const handleLogin = () => {
+        console.log(email);
+        console.log(password);
+    }
     return (
         <div className="contener">
             <div className="main">
@@ -90,24 +96,26 @@ export default function Form() {
                                 onClick={handleWithGoogle}>Log In With GOOGLE</button>
                         </div>
                         <div id="log_in" ref={x}>
-                            <form action="signUpOk()" method="POST">
+                            <form onSubmit={handleLogin}>
                                 <div className="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input name="email" type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                    <label>Email address</label>
+                                    <input type="email" className="form-control" placeholder="Enter email"
+                                        value={email} onChange={(event) => setEmail(event.target.value)} />
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input name="password" type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                    <label >Password</label>
+                                    <input type="password" className="form-control" placeholder="Password"
+                                        value={password} onChange={(event) => setPassword(event.target.value)} />
                                 </div>
                                 <div className="form-group form-check">
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" for="exampleCheck1">Remember me</label>
                                 </div>
-                                <button type="button" className="btn btn-light btn_style">Log In</button>
+                                <button type="button"  className="btn btn-light btn_style">Log In</button>
                             </form>
                         </div>
                         <div id="sign_up" ref={y}>
-                            <form action="signUpOk()" method="POST">
+                            <form action="signUpOk()">
                                 <div className="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
@@ -126,7 +134,7 @@ export default function Form() {
                     </>}
 
                 {details != '' &&
-                    <div  className='text-center' style={{marginLeft:'-10px'}}>
+                    <div className='text-center' style={{ marginLeft: '-10px' }}>
                         <div className="google_box">
                             <button type="button" className="btn btn-light btn_style" id="quickstart-sign-out"
                                 onClick={handleWithGoogle}>Sign Out</button>
@@ -141,7 +149,7 @@ export default function Form() {
                             {details.displayName}
                         </div>
                         <div className='h5'>
-                            {details.email}<br/>
+                            {details.email}<br />
                             {details.phoneNumber}
                         </div>
                     </div>}
