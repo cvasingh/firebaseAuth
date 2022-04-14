@@ -81,6 +81,11 @@ export default function Form() {
     }
     return (
         <div className="contener">
+            {details != '' &&
+                <div class="signout">
+                    <button class="btn btn-sm btn-light" type="submit" name="signout"
+                        value="signout" onClick={handleWithGoogle}>Sign Out</button>
+                </div>}
             <div className="main">
                 {details === '' &&
                     <>
@@ -111,7 +116,7 @@ export default function Form() {
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" for="exampleCheck1">Remember me</label>
                                 </div>
-                                <button type="button"  className="btn btn-light btn_style">Log In</button>
+                                <button type="button" className="btn btn-light btn_style">Log In</button>
                             </form>
                         </div>
                         <div id="sign_up" ref={y}>
@@ -135,10 +140,7 @@ export default function Form() {
 
                 {details != '' &&
                     <div className='text-center' style={{ marginLeft: '-10px' }}>
-                        <div className="google_box">
-                            <button type="button" className="btn btn-light btn_style" id="quickstart-sign-out"
-                                onClick={handleWithGoogle}>Sign Out</button>
-                        </div>
+
                         <div className='p-3'>
                             <img src={details.photoURL} />
                         </div>
@@ -149,8 +151,14 @@ export default function Form() {
                             {details.displayName}
                         </div>
                         <div className='h5'>
+                        {details.providerId}<br />
+                        {details.emailVerified}<br />
                             {details.email}<br />
-                            {details.phoneNumber}
+                            {details.phoneNumber}<br />
+                            {console.log(details)}<br />
+                            {JSON.stringify(details.metadata.creationTime)}<br />
+                            {JSON.stringify(details.metadata.lastSignInTime)}<br />
+
                         </div>
                     </div>}
             </div>
